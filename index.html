@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background:#000;
+        color:black;
+        font-family: "Poppins", serif;
+      }
+      /* .header
+      {
+        width: 100%;
+        position: relative;
+      } */
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; 
+        height: 70px;
+        /* background-color:palevioletred; */
+        background:black;
+        position: fixed;
+
+       
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 20px;
+        margin-top: 15px;
+       
+       
+      }
+      nav ul li a {
+        text-decoration: none;
+        color:pink;
+        position: sticky;
+        font-weight: 600;
+        
+      }
+      nav ul li a:hover {
+        color:white;
+        font-size: 1.2rem;
+      }
+       
+      .left {
+        font-size: 2.1rem;
+        font-weight: bold;
+        /* color:  rgb(232, 171, 27); */
+        color: pink;
+        margin-top: 8px;
+        padding-right: 30px;
+      }
+      .home-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 550px;
+        background-color: rgb(151, 95, 114);
+        /* background-image: url(../img/desktop-wallpaper.jpg); */
+        /* background-repeat: no-repeat; */
+         /* background-size: cover;  */
+         /* background-position: center;
+         animation: backgroundShift 10s ease-in-out infinite */
+
+      }
+      .leftsection {
+        font-size: 2rem;
+        width: 30%;
+        padding: 150px 0px; 
+        margin-left: 8%;
+        color:black;
+       margin-top: 35px;
+       font-weight: 700;
+       
+      
+      }
+     
+
+       .rightsection img {
+        
+        width: 40%;
+        height: 300px;
+        /* margin: 70px 13%; 
+        margin-top: 30px; */
+        /* width: 70%;
+        padding-left: 50px; */
+        /* border-radius: 50%;
+        padding-right: 100px;
+        padding-left: 100px;
+        width: 100%;
+         */
+         margin-top: 70px;
+         /* border-radius: 50%; */
+         margin-left: 300px;
+        
+      
+      } 
+      /* .purple {
+        color: rgb(236, 124, 161);
+        
+        font-weight: bold;
+      } */
+      
+       .typing-container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            
+        }
+
+        .typing-text {
+            font-weight: bold;
+            border-right: 2px solid black;
+            white-space: nowrap;
+            overflow: hidden; 
+            width: 0%;
+            position: absolute;
+            left: 0;
+            animation: typing 6s steps(30, end) infinite, blink-caret 0.75s step-end infinite;
+            font-size: calc(1rem + 1vw);
+            color: white;
+
+        }
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 15ch;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+              border-color: white;
+            }
+        }
+        .btn-sci
+        {
+           align-items: center;
+          
+
+        }
+        .btn{
+          display: inline-block;
+          /* padding: 10px 30px; */
+          /* color:rgb(227, 203, 68); */
+          color: rgb(244, 150, 181);
+          padding-left: 25px;
+          background-color:rgb(22, 2, 2) ;
+          padding-right: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px;
+          border: 1px solid #000;
+          font-weight: bold;
+          margin-top: 6px;
+        }
+          
+
+        .img-card1 {
+          object-fit: cover;
+            width: 100%;
+            height: 250px;
+           
+        }
+
+        .img-class img:hover {
+            border-color: black;
+        }
+
+        .icon-class i:hover 
+        {
+          background-color: rgb(112, 112, 112) !important;
+        }
+        
+      /* ...............about me................. */
+        #about
+        {
+          padding: 70px 0;
+          background:black;
+          padding-top: 40px;
+          margin-bottom: 30px;
+          height: 470px;
+          
+          
+        }
+        .row
+        {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        .about-col-1
+        {
+           flex-basis: 35%;
+        }
+        .about-col-1 img
+        {
+          height: 400px;
+          width: 100%;
+          border-radius: 15px;
+          margin-left: 10px;
+          
+        }
+        .about-col-2
+        {
+          flex-basis: 60%;
+          font-size: 17px;
+          color:white;
+          margin-top: 10px;
+          letter-spacing: 1px;
+         
+          
+          
+
+        }
+        .sub-title
+        {
+            font-size:50px;
+            font-weight: 600;
+            color:white;
+            letter-spacing: 2px;
+        }
+        
+
+        
+      /* .....................conatct me...............*/
+        
+        /* #contact
+        {
+          padding-bottom: 40px;
+        }
+        .contact-left
+        {
+          flex-basis: 35%;
+
+        }
+        .contact-right
+        {
+          flex-basis:60% ;
+        }
+
+        .contact-left p{
+          margin-top: 30px;
+          color: rgb(234, 140, 171);
+        }
+        .contact-left p i{
+          color:white;
+          margin-right: 15px;
+          font-size: 20px;
+         
+        }
+        .social-icons
+        {
+          margin-top: 30px;
+        }
+        .social-icons a
+        {
+          text-decoration: none;
+          font-size: 30px;
+          margin-right: 15px;
+          
+          display: inline-block;
+          color: white;
+          
+        }
+        .social-icons a:hover{
+          color:rgb(220, 135, 149);
+          transform: translate(-5px);
+        }
+        .contact-left form{
+          width: 100%;
+
+        } */
+        form input,form textarea{
+          width: 100%;
+          border: 0;
+          outline: none; 
+          background: #635d5dbd;
+          padding: 10px;
+          margin: 15px 0;
+          color: black;
+          font-size: 18px;
+          border-radius: 6px;
+
+        }
+        form 
+        {
+            text-align: center; /* Centers content inside the form */
+        }
+        
+
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 15px;
+  margin: 20px auto; 
+  cursor: pointer;
+  color: rgb(236, 124, 161);
+  box-shadow: 0 0 10px;
+  border: 1px solid #000;
+  font-weight: bold;
+  background-color: rgb(22, 2, 2);
+  border-radius: 10px;
+  display: block; 
+}
+
+        /* .footer
+        {
+          
+          height: 100px;
+          background: #c50b0b;
+          
+        }
+
+        .copyright 
+        {
+          margin-top: 30px;
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          padding: 25px 0;
+          
+          font-weight: 700;
+          color:white;
+
+        }
+        .copyright i{
+          color: red;
+        } */
+         #project
+        {
+           background-color:rgb(151, 95, 114); 
+           margin-top: 50px;
+           height: 720px;
+          
+          /* text-align: center;
+          display: inline-block; */
+        } 
+  .project 
+  {
+  background-color:white;
+  border-radius: 10px;
+  box-shadow: 0 9px 10px black;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 3s ease-in-out;
+  justify-content: center;
+  
+  
+  
+}
+.projects-section {
+  /* background-color: #222; */
+  color: #fff;
+  padding: 20px 20px;
+  text-align: center;
+  
+}
+
+
+/* .projects-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ff6b6b;
+} */
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
+ 
+} 
+
+.project-card {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  height: 400px;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.project-image img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+
+/*.project:hover
+ {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.project-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+  
+}
+
+.project:hover .project-img {
+  transform: scale(1.05);
+  
+}
+
+
+.project-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color:rgb(41, 122, 214);
+}
+
+.project-description {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: black;
+}
+
+.project-link {
+  font-size: 16px;
+  color: #ff6b6b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} -->
+/* footer {
+  background-color:palevioletred; 
+  color: #fff; 
+  text-align: center; 
+  padding: 20px 0; 
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 70px;
+  font-weight: 400;
+}
+
+.footer-content p {
+  margin: 0; 
+  font-size: 14px; 
+}
+
+.footer-content i {
+  color: red; 
+  margin: 0 5px; 
+}
+
+
+ */
+.skills-Section
+{
+  background-color: rgb(151, 95, 114);
+   /* width: auto; */
+   height:380px;
+   padding: 30px 0;
+   position: sticky;
+   
+}
+.skills-bar h1
+{
+   text-align: center;
+   color: white;
+   margin-bottom: 20px;
+   font-weight: 600;
+   font-size: 50px;
+   
+}
+
+.conatiner
+{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  justify-content: center;
+  grid-gap:2px;
+  justify-items: center;
+  padding-left: 190px;
+  margin-top: 80px;
+  padding-right: 190px;
+ 
+
+}
+/* .skills-box
+{
+  text-align: center;
+  color: #ff6b6b;
+}  */
+
+.img
+{
+  width: 100px;
+  height: 100px;
+  position: relative; 
+  border-radius: 50%;
+  background-color: #37373799;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  align-items: center; 
+  margin: 0 auto 10px;
+  
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  
+
+}
+.img:hover {
+  transform: scale(1.1);
+}
+.img img{
+  width: 60%;
+  height: 60%;
+  object-fit: cover;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) 
+{
+  #skills-section .container
+   {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+  </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skill">Skills</a></li>
+            <li ><a href="#Education">Education</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+    </nav>
+      
+        
+    </header>
+
+    <main>
+    <section class="home-section">
+        <div class="leftsection">
+           Hello!<br><span class="pink" style="padding-right: 40px;">I'm Rutuja Amrutkar</span>
+          <div class="typing-container" style="height: 40px; width: 100%; margin-top: 20px;">
+            <p class="typing-text text-white">Software Engineer</p>
+        </div> 
+          <div class="btn-sci">
+          <a href="../img/Rutuja_Resume (2).pdf" download="Rutuja_Resume"class="btn">Download cv</a>
+          </div>
+          </div> 
+          <span id="element"></span>
+        </div>
+        
+        <div class="rightsection">
+           <img src="../img/business-women_.avif"/> 
+        </div>
+      </section>
+      
+
+     <!-- ............................About section ............... -->
+      <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="../img/Rutu_Photo.jpg">
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I am Rutuja Amrutkar.from chalisgoan I have completed my BE in Computer Sciences From Pune Univercity.
+              I have developed skills in Java, C, C++ , HTML/CSS , Bootstrap and MySQL. I'm excited to use my skills in a challenging environment, contributing to projects while
+              continuing to grow as a software engineer.
+            </p>
+            <!-- <div class="tab-title">
+              <p class="tab-links active-link">Skills</p>
+              <p class="tab-links-2">Experinses</p> 
+
+            </div>
+            <div class="tab-contents">
+              <ul>
+                <li><span>Java</span></li>
+                <li><span>SQL</span></li>
+                <li><span>HTML&CSS</span></li>
+                <li><span>Bootstrap</span></li>
+                <li><span>Javascript</span></li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      </div>
+    
+      
+
+
+<!-- --------------------------------Skills------------------------------->
+
+
+<div class="skills-Section" id="skill">
+  <div class="skills-bar">
+    <h1>Skills</h1>
+  </div>
+  <div class="conatiner">
+
+    <!----------html------->
+    <div class="skill-box">
+      <div class="skill-title">
+        <div class="img">
+          <img src="../img/Html Logo.png">
+        </div>
+       </div>
+    </div>
+
+       
+     <!----------css------->
+
+    <div class="skill-box">
+      <div class="skill-title">
+        <div class="img">
+          <img src="../img/css_logo.png">
+        </div>
+      </div>
+    </div>
+
+ <!----------js------->
+    <div class="skill-box">
+      <div class="skill-title">
+        <div class="img">
+          <img src="../img/js_logo.png">
+        </div>
+      </div>
+    </div>
+
+   <!----------boostrap------->
+    <div class="skill-box">
+      <div class="skill-title">
+        <div class="img">
+          <img src="../img/boostrap_logo.jpg">
+        </div>
+      </div>
+    </div>
+
+     <!----------java------->
+    <div class="skill-box">
+      <div class="skill-title">
+        <div class="img">
+          <img src="../img/java_logo.png">
+        </div>
+      </div>
+    </div>
+
+ <!----------sql------->
+
+ <div class="skill-box">
+      <div class="skill-title">
+        <div class="img">
+          <img src="../img/sql_logo.jpg">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+  
+<!-- ..........................Education...................... -->
+
+<div class="container-fluid pt-5 bg-black" id="Education">
+  <div class="container ">
+      <div class= "mb-5 mt-6 pb-3">
+          <h1 class="text-white text-center" style="font-size:50px;font-weight: bold;">Education</h1>
+          <div
+              style="height: 3px; background-color: rgb(199, 130, 153)">
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-12 mb-4 text-white">
+              <div class="p-4 pt-4 pe-5" style="background-color: #373737; min-height: 250px;">
+                  <h3 class="text mb-3 fw-bolder" style="color: rgb(224, 140, 168);">2019-2023</h3>
+                  <h3 class="mb-3">Bachelor of Engineering</h3>
+                  <h5 class="opacity-50 mt-2 mb-4 fst-italic" style="letter-spacing: 2px;"><p>Bharati Vidyapeeth
+                  College of Engineering,Pune</p></h5>
+
+                  <p class="opacity-50 " style="font-size: 17px;">Grade: First Class with Distiction (CSE)</p>
+              </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-12 mb-4 text-white">
+            <div class="p-4 pt-4 pe-5" style="background-color: #373737; min-height: 260px;">
+              <h3 class="text mb-3 fw-bolder" style="color: rgb(224, 140, 168);">2018-2019</h3>
+              <h3 class="mb-3">Higher Secondary School</h3>
+              <h5 class="opacity-50 mt-2 mb-4 fst-italic" style="letter-spacing: 2px;">Kavivarya Mahadhoya College,Vadgoan</h5>
+              <p class="opacity-50 " style="font-size: 17px;">Grade: First Class (Science)</p>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+<!-- ................................Project........... -->
+
+<div class="container-fluid" id="project">
+  <div class="container" style="padding-bottom: 100px; padding-top: 20px; height: 100;">
+      <div class="container1 text-center py-5 text-white">
+          <h1 class="display-1 fw-bold  position-absolute top-50 start-50 translate-middle large-text"
+          style="opacity: 0%; ">Project</h1> 
+        
+          <h2 class="fw-bold position-relative display-4" style="letter-spacing: 2px;">Project</h2>
+          <p class="position-relative " id="first-project" style="color: white; font-size: 10;">Below are the projects on Java and HTML & CSS.</p>
+      </div>  
+
+       <div class="projects-section">
+        <div class="projects-header">
+          <!-- <h1>Projects</h1> -->
+        </div>
+        <div class="projects-container"> 
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../img/pro_1 img.jpg" alt="Project 1">
+            </div>
+            <div class="project-details">
+              <h3>Secure File Access System</h3>
+              <p>An Android application that ensures secure file sharing with role-based access control.</p>
+            </div>
+          </div>
+      
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../img/pro_2.jpg" alt="Project 2">
+            </div>
+            <div class="project-details">
+              <h3>To-Do List App</h3>
+              <p>A web-based to-do list app with task addition, deletion, and update features using HTML, CSS, and JavaScript.</p>
+            </div>
+          </div>
+      
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="../img/pro_3.jpg" alt="Project 3">
+            </div>
+            <div class="project-details">
+              <h3>Library Management System</h3>
+              <p>A Library Management System (LMS) is a software application designed to manage the functions of a library, including the tracking and management of books</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+<!--<div class="project" style="margin-left: 380px;">
+          <img src="../img/pro_1 img.jpg" alt="Secure File Access System" class="project-img">
+          <h3 class="project-title">Secure File Access System</h3>
+          <p class="project-description">
+            Developed a secure Android app to provide access control to files using encryption and authentication mechanisms.
+          </p>
+          <a href="#" class="project-link" target="_blank">View Project</a>
+        </div>
+
+        <div class="project" style="margin-left: 380px;">
+          <img src="../img/pro_1 img.jpg" alt="Secure File Access System" class="project-img">
+          <h3 class="project-title">Secure File Access System</h3>
+          <p class="project-description">
+            Developed a secure Android app to provide access control to files using encryption and authentication mechanisms.
+          </p>
+          <a href="#" class="project-link" target="_blank">View Project</a>
+        </div>
+
+        <div class="project " style="margin-left: 380px;">
+          <img src="../img/pro_1 img.jpg" alt="Secure File Access System" class="project-img">
+          <h3 class="project-title">Secure File Access System</h3>
+          <p class="project-description">
+            Developed a secure Android app to provide access control to files using encryption and authentication mechanisms.
+          </p>
+        <a href="#" class="project-link" target="_blank">View Project</a>
+        </div>-->   
+
+<!-- ..............................contact.......................  -->
+
+<div class="container-fluid bg-black " style=" min-height: 500px; margin-top: 80px; padding-bottom: 60px;" id="contact">
+  <div class="container">
+      <div class="container1 text-center py-2 text-white">
+          <h1 class="display-1 fw-bold  position-absolute top-50 start-50 translate-middle large-text"
+              style="opacity: 0%; letter-spacing: 3px;">Contact</h1>
+          <h2 class="fw-bold position-relative display-4 "style="letter: spacing 2px;">Contact Me</h2>
+          <!-- <p class="fs-5 fst-italic opacity-75">Below are the details to reach out to me!</p> -->
+      </div>
+      <div class="row justify-content-center gap-4 align-items-center text-center "
+          style=" margin-top: 40px;">
+
+          <div class=" text-white col-lg-2 col-md-5 col-sm-5 col-5 ">
+              <a href="https://maps.app.goo.gl/vgceZnumFBFXyFUT9" class="text-decoration-none text-white">
+              <i class="text-warning fa-solid fa-location-dot fs-2 rounded-circle p-4 mb-4"
+                  style="background-color: #373737;"></i>
+              <h5>Address</h5>
+              <p>Pune, Maharashtra</p>
+          </a>
+          </div>
+
+          <div class="text-white col-lg-2 col-md-5 col-sm-5 col-5">
+              <a href="tel:8788321688"  class="text-decoration-none text-white">
+              <i class="text-primary  fa-solid fa-phone fs-2 rounded-circle p-4 mb-4" style="background-color: #373737;"></i>
+                  
+              <h5>Contact</h5>
+              <p>8788321688</p>
+          </a>
+          </div>
+
+          <div class=" text-white col-lg-2 col-md-5 col-sm-5 col-5">
+            <a href="mailto:rutujaamrutkar2000@gmail.com" class="text-decoration-none text-white">
+                <i class="text-danger fa-solid fa-envelope fs-2 rounded-circle p-4 mb-4 "
+                    style="background-color: #373737;"></i>
+                <h5>Email</h5>
+                rutujaamrutkar2000
+            </a>
+        </div>
+
+          <div class=" text-white col-lg-2 col-md-5 col-sm-5 col-5 ">
+              <a class="text-decoration-none text-white"
+                href="https://www.hackerrank.com/profile/rutujaamrutkar21">
+                  <i class="text-success fa-brands fa-hackerrank fs-2 rounded-circle p-4 mb-4 "
+                      style="background-color: #373737;"></i>
+                  <h5>HackerRank</h5>
+                  Click Here 
+              </a>
+          </div>
+      </div> -->
+
+      <div class=" text-info d-flex flex-column justify-content-center align-items-center gap-3 mt-5">
+          <!-- <h5 class=" text-white">Find me on</h5> -->
+          <div class=" d-flex gap-3 icon-class">
+              <i class="fa-brands fa-telegram fs-4 rounded-circle p-3  "
+                  style="background-color: #373737; cursor: pointer;"></i>
+              <i class="fa-brands fa-linkedin fs-4 rounded-circle p-3"
+                  style="background-color: #373737; cursor: pointer;"></i>
+              <i class="fa-brands fa-facebook fs-4 rounded-circle p-3"
+                  style="background-color: #373737; cursor: pointer;"></i>
+              <i class="fa-brands fa-github fs-4 rounded-circle p-3"
+                  style="background-color: #373737; cursor: pointer;"></i>
+          </div>
+      </div>
+
+      <footer class="text-white d-flex justify-content-center align-items-center"
+          style="margin-top: 70px; margin-bottom: 40px;">
+          <h5 class="opacity-50 " style="text-align: center;">Copyright &copy:2024 All rights reserved | This
+              template is made by Rutuja Amrutkar</h5>
+      </footer>
+  </div>
+</div>
+
+
+</div>
+
+<!-- <div id="contact">
+  <div class="conatiner" style="margin-top: 110px;">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-regular fa-envelope"></i>rutujaamrutkar2000@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>8788321688</p>
+        
+        <div class="social-icons">
+          <a href=""><i class="fa-solid fa-envelope"></i></a>
+          <a href=""><i class="fa-solid fa-phone"></i></a>
+          <a href="https://github.com/Ruts8788"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/rutuja-amrutkar-044b68227/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
+          <button type="submit" class=" btn2">submit</button>
+        </form>
+      </div> 
+
+    </div>.
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>Copyright &copy; 2024 All rights reserved | This template is made <i class="fa-solid fa-heart"></i> by Rutuja Amrutkar</p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+  <!-- <section class="footer">
+  <div class="copyright">
+    <p>Copyright &copy:2024 All rights reserved | This
+      template is made <i class="fa-solid fa-heart"></i> by Rutuja Amrutkar</p>
+  </div>
+</div>
+</section>  -->
+ </main>
+</body>
+</html> 
